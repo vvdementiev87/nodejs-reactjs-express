@@ -6,9 +6,9 @@ import DeviceItem from "./DeviceItem";
 const DeviceList = observer(() => {
   const { device } = useContext(Context);
   return (
-    <div className="d-flex">
+    <div className="d-flex flex-wrap">
       {device.devices.map((device) => (
-        <DeviceItem device={device} />
+        <DeviceItem key={device.id} device={device} />
       ))}
     </div>
   );
